@@ -1,3 +1,6 @@
+One important aspect of this project is that it does not use routing. This project uses conditional rendering of components instead of routing for navigation. The decision not to use routing was made because of considerations related to deploying on GitHub Pages. GitHub Pages typically work best with single-page applications (SPAs), and using  routing can sometimes lead to issues with client-side routing on GitHub Pages.
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
