@@ -1,0 +1,99 @@
+/* Saved Items Container */
+.itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 1rem;
+
+  }
+  
+  /* Individual Recipe Item */
+  .item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s;
+    width: 250px;
+    transition: box-shadow 0.3s;
+    position: relative;
+    
+  }
+  
+  /* Hover Effect for Recipe Items */
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Recipe Image */
+  .recipeImage {
+    max-width: 13rem;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Overlay for Recipe Image */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Hover Effect for Recipe Image */
+  .recipeImage:hover + .overlay {
+    opacity: 1;
+  }
+  
+  /* Close Icon and Save Recipe Text */
+  .bookmarkIcon {
+    position: absolute;
+    top: 5px;
+    right: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Close Icon (IoMdClose from react-icons) */
+  .bookmarkIcon svg {
+    fill: #fff;
+    background-color: #f44336;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    height: auto;
+    width: 2rem;
+  }
+  
+  /* Save Recipe Text */
+  .saveRecipe {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  /* Recipe Name */
+  .recipeName {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+    max-width: 13rem;
+    text-align: center;
+  }
+  
