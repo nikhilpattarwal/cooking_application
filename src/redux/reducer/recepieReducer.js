@@ -13,8 +13,6 @@ const initialState = {
 };
 
 
-//  https://api.edamam.com/api/recipes/v2?type=public&q=pizza&app_id=54bac442&app_key=c0e61aaca2bce24b3bc67b06cfc90bc5
-
 // geting data from api
 export const recipeItems = createAsyncThunk("items/getRecepieItems", async (query) => {
    const {app_id, app_key} = queryStrings
@@ -34,8 +32,6 @@ export const itemSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(recipeItems.fulfilled, (state, action) => {
-        console.log(action.payload)
-        console.log(state)
       state.items = action.payload.data.hits; // Assuming you want to set the payload directly as items.
     });
   },

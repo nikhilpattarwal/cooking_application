@@ -17,10 +17,6 @@ export const loadSavedItemsFromLocalStorage = () => (dispatch) => {
 };
 
 
-// console.log(localStorage.getItem("savedItems"));
-
-// console.log("initialState",initialState);
-
 const savedSlice = createSlice({
     name: "savedItems",
     initialState,
@@ -56,7 +52,6 @@ const savedSlice = createSlice({
       },
       LOAD_FROM_LOCAL_STORAGE: (state, action) => {
       state.savedItems = action.payload;
-      console.log("LOADFROMLOCALSTORAGE", action.payload);
     },
     
     },

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react"; // Import useState
+import { useEffect } from "react"; // Import useState
 import styles from "./savedItems.module.css"
 import { IoMdClose } from 'react-icons/io';
 import { loadSavedItemsFromLocalStorage, savedActions, savedSelector } from "../../redux/reducer/savedRecReducer";
@@ -8,18 +8,11 @@ import { loadSavedItemsFromLocalStorage, savedActions, savedSelector } from "../
 
 export const SavedItems = () => {
   const dispatch = useDispatch();
-  
   const {savedItems} = useSelector(savedSelector);
   
-   console.log("saved items file",savedItems);
-  
-  //   useEffect(()=>{
-  //   dispatch(loadSavedItemsFromLocalStorage());
-  // })
-
   useEffect(()=>{
     dispatch(loadSavedItemsFromLocalStorage());
-  },[])
+  },[dispatch])
 
   return (
     <> 

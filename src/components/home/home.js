@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { itemSelector, recipeItems } from "../../redux/reducer/recepieReducer";
-import { useEffect, useState } from "react"; // Import useState
+import { useEffect, useState } from "react";
 import styles from "./home.module.css";
 import { FaBookmark } from "react-icons/fa";
 import { savedActions } from "../../redux/reducer/savedRecReducer";
@@ -32,12 +32,12 @@ export const Home = (props) => {
 
   useEffect(() => {
     dispatch(loadSavedItemsFromLocalStorage());
-    dispatch(recipeItems(value)); // Pass the 'value' to the recipeItems action
+    dispatch(recipeItems(value)); 
     props.setLoader(false)
     if (value === "") {
       setValue("b");
     }
-  },[]); // Add 'value' to the dependencies array
+  },[dispatch, value, props.setLoader]); 
    
  
 
@@ -58,7 +58,7 @@ export const Home = (props) => {
                 aria-label="Search"
                 onChange={(e) => setValue(e.target.value)}
               />
-              <button onClick={()=>(handleInputChange(value), props.setLoader(true))} className="btn btn-outline-success" type="submit">
+              <button onClick={()=>(handleInputChange(value))} className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>
@@ -88,7 +88,7 @@ export const Home = (props) => {
         </div>
       </div>
 
-        {/* Recipe Details Popup/Modal */}
+        {/* /* Recipe Details Popup/Modal */ }
         {showPopup && selectedRecipe && (
         <div className={styles.popupContainer}>
           <div className={styles.popup}>

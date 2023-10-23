@@ -1,3 +1,5 @@
+
+// this page is showing recipe details when clicking on any item
 import React from 'react';
 import styles from "./recipeDetails.module.css"
 const RecipeDetails = ({ recipe, onClose }) => {
