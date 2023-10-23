@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cooking_application/static/css/main.368b1d3c.css",
+    "main.js": "/cooking_application/static/js/main.f75fa875.js",
+    "index.html": "/cooking_application/index.html",
+    "main.368b1d3c.css.map": "/cooking_application/static/css/main.368b1d3c.css.map",
+    "main.f75fa875.js.map": "/cooking_application/static/js/main.f75fa875.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.368b1d3c.css",
+    "static/js/main.f75fa875.js"
+  ]
+}
